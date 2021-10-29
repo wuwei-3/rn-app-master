@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">rn3</string>
+    <!-- <string name="app_name">rn3</string> -->
+    <string name="app_name">派派</string>
 </resources>
