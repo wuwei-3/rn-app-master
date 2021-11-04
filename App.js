@@ -4,7 +4,7 @@
  * @Autor: wuwei3
  * @Date: 2021-10-29 09:40:16
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-10-29 14:34:57
+ * @LastEditTime: 2021-11-04 18:04:57
  */
 import React, {Component} from 'react';
 import {View} from 'react-native';
@@ -15,7 +15,7 @@ export default class App extends Component {
     return (
       <View style={{height: '100%', width: '100%', overflow: 'hidden'}}>
         <WebView
-          source={{uri: 'https://wuwei.work/app-master/#/'}}
+          source={{uri: 'https://wuwei.work/app-master/'}}
           scalesPageToFit={true}
         />
       </View>
