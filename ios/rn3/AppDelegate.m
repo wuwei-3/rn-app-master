@@ -50,13 +50,24 @@ static void InitializeFlipper(UIApplication *application) {
   return YES;
 }
 
-- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+// - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+// {
+// #if DEBUG
+//   return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+// #else
+//   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+// #endif
+
+// 加载离线资源
+  - NSURL *jsCodeLocation;
 {
-#if DEBUG
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-#else
-  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-#endif
+  //测试
+  #if DEBUG
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  //正式
+  #else
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  #endif
 }
 
 @end
